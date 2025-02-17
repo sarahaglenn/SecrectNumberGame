@@ -1,23 +1,21 @@
 # ☕️ Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This program runs a number guessing game that generates a random number and then gives the player a limited number of chances to guess the number. The game provides feedback to the player after each guess, indicating whether the secret number is higher or lower. If players guess correctly within the limit, and the score is higher than the current 5th place score, their score is added to the leaderboard. The high scores are loaded from a file (if it exists).
 
-{Provide a description of the software that you wrote to demonstrate the Java language.}
+The purpose of writing this program was to get a foundational understanding of using Java to write a simple, interactive number guessing game incorporating variables, loops, user input, and file handling.
 
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
+# 👀 Video Demo
 
 [Software Demo Video](http://youtube.link.goes.here)
 
-# 👀 Development Environment
+# 🛠️ Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+- VS Code: 1.96.4
+- Java: 17.0.14
+- JDK: 17.0.14
+- Extension Pack for Java by Microsoft
 
 # 💡 Useful Websites
-
 
 - [W3 Schools Java Tutorial](https://www.w3schools.com/java/default.asp)
 - [Oracle: The Java Tutorials](https://docs.oracle.com/javase/tutorial/)
@@ -26,7 +24,9 @@
 
 # 🚀 Future Work
 
-
-- Item 1
-- Item 2
-- Item 3
+- Change Main flow to continually offer new game and have exit option
+- Add "View High Scores" to Main Menu
+- Make error handling more robust
+  - Validate user input in more exhaustive way
+  - Do more testing around file opening/writing
+- Change grammar for winning in 1 guess
