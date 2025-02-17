@@ -89,7 +89,7 @@ public class SecretNumber {
     private void youLose() {
         String gameOver = "\nGame over.\nYou ran out of guesses.\nThe secret number was " + secretNumber + "\n";
         System.out.println(gameOver);
-        System.out.println("Score: " + score.getValue());
+        System.out.println("Score: " + calculateScore());
     }
     public void setScore(String name) {
         int scoreValue = calculateScore();
@@ -103,6 +103,9 @@ public class SecretNumber {
     }
 
     private int calculateScore() {
+        if (currentGuess != secretNumber) {
+            return 0;
+        }
         int range = highRange - lowRange;
         if (range ==0) return 0; // Prevent division by zero
         double bonus = ((double) (guessesAllowed - guessCount + 1) / guessesAllowed) * (range / 10);
