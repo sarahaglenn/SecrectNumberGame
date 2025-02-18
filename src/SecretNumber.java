@@ -15,8 +15,8 @@ public class SecretNumber {
     // Constructors
     public SecretNumber(Scanner scanObj) {
         lowRange = 0;
-        highRange = 5; // **** Change back to 100 later!!! *******
-        guessesAllowed = 10; // **** Change back to 5 later!!! *******
+        highRange = 100;
+        guessesAllowed = 6;
         guessCount = 0;
         secretNumber = generateRandomNumber();
         inputScanObj = scanObj;

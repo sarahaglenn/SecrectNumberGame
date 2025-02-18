@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        System.out.println("Welcome to Guess the Secret Number!");
+        System.out.println("\n\nWelcome to Guess the Secret Number!");
         Scanner scanObj = new Scanner(System.in);
         int gameType = getGameType(scanObj);
         ScoreManager manager = new ScoreManager(scanObj);
