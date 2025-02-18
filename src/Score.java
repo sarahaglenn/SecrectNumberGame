@@ -17,6 +17,8 @@ public class Score implements Serializable, Comparable<Score> {
     public int getValue() {
         return value;
     }
+
+    // Method to define how to compare scores
     @Override
     public int compareTo(Score other) {
         return Integer.compare(other.value, this.value);

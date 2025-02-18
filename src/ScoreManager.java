@@ -61,13 +61,13 @@ public class ScoreManager {
                 }
             }
             game.setScore(playerName);
-            if (highScores.size() < 5) {
-                highScores.add(game.getScore());
+            if (highScores.size() < 5) { // Only top 5 scores are saved.
+                highScores.add(game.getScore()); // If less than 5, this is a high score
             } else {
-                highScores.remove(4);
-                highScores.add(game.getScore());
+                highScores.remove(4); // Remove the current lowest high score
+                highScores.add(game.getScore()); // Then add the new high score
             }
-            Collections.sort(highScores);
+            Collections.sort(highScores); // Put scores in descending order
             saveScores("highscores.dat");
         }
     }
@@ -84,13 +84,14 @@ public class ScoreManager {
     public void saveScores(String filename) {
         try (ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(filename))) {
             for (Score score: highScores) {
-                output.writeObject(score);
+                output.writeObject(score); // save each score object
             }
         } catch (IOException e) {
             System.err.println("An error occurred while saving the score.");
             e.printStackTrace();
         }
     }
+    // Method to print all high scores
     public void printScores() {
         System.out.println("High Scores: ");
         for (Score score: highScores) {

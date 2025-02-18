@@ -6,7 +6,7 @@ The purpose of writing this program was to get a foundational understanding of u
 
 # 👀 Video Demo
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/91C-7aZIuD4)
 
 # 🛠️ Development Environment
 
@@ -30,4 +30,3 @@ The purpose of writing this program was to get a foundational understanding of u
   - Validate user input in more exhaustive way
   - Do more testing around file opening/writing
 - Change grammar for winning in 1 guess
-- Add more comments in the code

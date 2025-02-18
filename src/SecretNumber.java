@@ -13,7 +13,7 @@ public class SecretNumber {
     private Score score;
 
     // Constructors
-    public SecretNumber(Scanner scanObj) {
+    public SecretNumber(Scanner scanObj) { // Default settings - used if custom values are not set
         lowRange = 0;
         highRange = 100;
         guessesAllowed = 6;
@@ -21,6 +21,7 @@ public class SecretNumber {
         secretNumber = generateRandomNumber();
         inputScanObj = scanObj;
     }
+    // Creates custom game
     public SecretNumber(int customLowRange, int customHighRange, int customGuessesAllowed, Scanner scanObj) {
         if (customLowRange >= customHighRange) {
             throw new IllegalArgumentException("Low bound must be less than high bound.");
@@ -59,6 +60,7 @@ public class SecretNumber {
         }
         youLose(); // Ran out of guesses
     }
+    // Prompts for a guess, captures the input, and saves to currentGuess variable
     private void setCurrentGuess() {
         while (true) {
             System.out.print("Guess a number: ");
@@ -71,7 +73,7 @@ public class SecretNumber {
             }
         }
     }
-
+    // Function to tell player whether to guess higher or lower
     private void giveHints() {
         if (currentGuess < secretNumber) {
             System.out.println("Higher");
@@ -101,7 +103,7 @@ public class SecretNumber {
     public int getCalculatedScore() {
         return calculateScore();
     }
-
+    // Method to calculate the player's score
     private int calculateScore() {
         if (currentGuess != secretNumber) {
             return 0;
